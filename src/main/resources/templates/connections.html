@@ -1,0 +1,28 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    <h1>Connected devices</h1>
+    <table>
+        <tr>
+            <td>Name</td>
+            <td>IP-Adress</td>
+            <td>MAC-Adress</td>
+            <td>Recent Connection time</td>
+        </tr>
+
+        <tr th:each="device : ${device}">
+            <td th:text="${device.name}">Horizon</td>
+            <td th:text="${device.ip}">192.168.192.1</td>
+            <td th:text="${device.mac}">00-80-41-ae-fd-7e</td>
+            <td th:text="${device.date}">31.10.2018</td>
+            <td>
+                <a th:href="@{device/} + ${device.ip}">Namen bearbeiten</a>
+            </td>
+        </tr>
+    </table>
+
+    <a href="/">Logout</a>
+</body>
+</html>

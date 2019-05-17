@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Device</title>
+</head>
+<body>
+    <form action="#" th:action="@{/device/} + ${device.ip}" th:object="${device}" method="post">
+        <input type="text" th:field="*{name}">
+        <input type="submit" value="change">
+    </form>
+    <a href="../../">return</a>
+</body>
+</html>
